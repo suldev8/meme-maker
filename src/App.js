@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './Header';
-import MemeForm from './MemeForm';
+import Header from './components/Header';
+import MemeForm from './components/MemeForm';
 
 class App extends Component {
   render() {
