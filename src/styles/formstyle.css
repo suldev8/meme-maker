@@ -1,10 +1,7 @@
 
 .memeimg{
-    margin-top: 75px;
-    margin-left: 290px;
-    height: 50%;
-    width: 50%;
-    border: solid;
+    width: 300px;
+    border: solid black;
     display: block;
 
 }

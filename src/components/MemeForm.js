@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import Image from './common/Image';
-// import Button from './common/Button';
+import Image from './common/Image';
+import Button from './common/Button';
 import TextField from './common/TextField';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
+// import Button from 'react-bootstrap/Button';
+// import Image from 'react-bootstrap/Image';
 import '../styles/formstyle.css';
 
 import axios from 'axios';
@@ -13,7 +13,7 @@ export class MemeForm extends Component {
     state = {
         topValue: '',
         bottomValue: '',
-        imageSrc: '',
+        imageSrc: "https://sanitationsolutions.net/wp-content/uploads/2015/05/empty-image-300x200.png",
         imageFile: null
     };
     
@@ -47,6 +47,7 @@ export class MemeForm extends Component {
         })
         .then(response => {
             if(response.data.status === 'success'){
+                console.log('Succeed');
                 this.getMeme(response.data.name);
             } else if(response.data.status === 'error'){
                 this.getMeme(imgNameTimeStamp);
@@ -73,6 +74,7 @@ export class MemeForm extends Component {
             }
         })
         .then(response => {
+            console.log(response);
             const bufferImage = Buffer.from(response.data, 'binary').toString('base64');
             const image = `data:image/jpeg;base64,${bufferImage}`;
             this.setState({imageSrc: image });
@@ -85,7 +87,7 @@ export class MemeForm extends Component {
         const { topValue, bottomValue, imageSrc } = this.state;
         return (
             <div className="meme-form-div">
-                <Image src="https://sanitationsolutions.net/wp-content/uploads/2015/05/empty-image-300x200.png" className="memeimg" />
+                <Image src={imageSrc} />
                 <TextField label="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
                 <TextField label="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
                 <Button label="Random Meme" onClick={this.onClickRandom} />
