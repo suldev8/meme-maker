@@ -1,11 +1,11 @@
 import React from 'react';
 
 const TextField = (props) => {
-    const { label, placeholder, name } = props;
+    const { label, placeholder, name, value, onChange } = props;
     return (
         <label>
-            {label} 
-            <input type="text" name={name} placeholder={placeholder} />
+            {label}
+            <input type="text" name={name} placeholder={placeholder} value={value} onChange={onChange} />
         </label>
     )
 }
