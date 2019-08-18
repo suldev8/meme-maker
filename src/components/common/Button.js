@@ -3,9 +3,9 @@ import React from 'react';
 
 
 const Button = (props) => {
-    const { label } = props;
+    const { label, onClick } = props;
     return (
-        <Button className="btn">{label}</Button>
+        <button onClick={onClick}>{label}</button>
     )
 }
 
