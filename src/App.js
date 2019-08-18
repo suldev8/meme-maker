@@ -3,10 +3,11 @@ import './App.css';
 import Header from './components/Header';
 import MemeForm from './components/MemeForm';
 
+
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app-div" >
         <Header />
         <MemeForm />
       </div>
