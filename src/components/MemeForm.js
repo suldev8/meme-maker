@@ -48,7 +48,6 @@ export class MemeForm extends Component {
             })
             .then(response => {
                 if(response.data.status === 'success'){
-                    console.log('Succeed');
                     this.getMeme(response.data.name);
                 } else if(response.data.status === 'error'){
                     this.getMeme(imgNameTimeStamp);
@@ -73,7 +72,6 @@ export class MemeForm extends Component {
             }
         })
         .then(response => {
-            console.log(response);
             const bufferImage = Buffer.from(response.data, 'binary').toString('base64');
             const image = `data:image/jpeg;base64,${bufferImage}`;
             this.setState({imageSrc: image });
