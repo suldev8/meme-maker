@@ -1,6 +1,6 @@
 export const HEADERS = {
     'x-rapidapi-host': 'ronreiter-meme-generator.p.rapidapi.com',
-    'x-rapidapi-key': '<api_key>'
+    'x-rapidapi-key': '7ad3b4f91fmsh363da081374791fp19b768jsnfa454f9072e8'
 };
 
 export const IMAGES_NAMES = [
