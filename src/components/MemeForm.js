@@ -5,9 +5,15 @@ import TextField from './common/TextField';
 // import Button from 'react-bootstrap/Button';
 // import Image from 'react-bootstrap/Image';
 import '../styles/formstyle.css';
-
 import axios from 'axios';
-import { IMAGES_NAMES, HEADERS } from '../data/meme-images'
+import { IMAGES_NAMES } from '../data/meme-images';
+import { MEME_API_KEY } from '../api_keys';
+
+
+const MEME_API_HEADERS = {
+    'x-rapidapi-host': 'ronreiter-meme-generator.p.rapidapi.com',
+    'x-rapidapi-key': MEME_API_KEY
+};
 
 export class MemeForm extends Component {
     state = {
@@ -44,7 +50,7 @@ export class MemeForm extends Component {
             axios.post('https://ronreiter-meme-generator.p.rapidapi.com/images',
             formData, {
                 headers: 
-                {...HEADERS, 'Content-Type': 'multipart/form-data'}
+                {...MEME_API_HEADERS, 'Content-Type': 'multipart/form-data'}
             })
             .then(response => {
                 if(response.data.status === 'success'){
@@ -63,7 +69,7 @@ export class MemeForm extends Component {
         axios({
             method: 'GET',
             url: 'https://ronreiter-meme-generator.p.rapidapi.com/meme',
-            headers: HEADERS,
+            headers: MEME_API_HEADERS,
             responseType: 'arraybuffer',
             params: {
                 meme: imageName,
