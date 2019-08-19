@@ -48,24 +48,6 @@ input {
 }
 
 
- .text-field{
-	 color: white;
-	border-width: 1pt;
-    margin:12px;
-	font-size: 1.7em;
-	background: linear-gradient(21deg, #10abff, #1beabd);
-	padding: 4px;
-	display: flex;
-	border-radius: 13px;
-	padding-left: 20px;
-	outline: none;
-	border: none;
-   }
-
-   .text-field::placeholder{
-	   color: white;
-   }
-
 
 
 	.text-field-div 

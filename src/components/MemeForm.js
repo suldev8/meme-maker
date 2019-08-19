@@ -4,11 +4,12 @@ import Button from './common/Button';
 import TextField from './common/TextField';
 // import Button from 'react-bootstrap/Button';
 // import Image from 'react-bootstrap/Image';
-import '../styles/formstyle.css';
 import axios from 'axios';
 import { IMAGES_NAMES } from '../data/meme-images';
 import { MEME_API_KEY } from '../api_keys';
 
+import './common/Button.css'
+import '../styles/MemeForm.css';
 
 const MEME_API_HEADERS = {
     'x-rapidapi-host': 'ronreiter-meme-generator.p.rapidapi.com',
@@ -93,14 +94,14 @@ export class MemeForm extends Component {
                 <Image className="memeimg" src={imageSrc} />
 
                 <div className="text-field-div">
-                <TextField className="text-field" placeholder="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
-                <TextField className="text-field" placeholder="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
+                <TextField placeholder="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
+                <TextField placeholder="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
                 </div>
 
             
                 <div className="btn-div">
-                <Button className="main-btn" label="Random Meme" onClick={this.onClickRandom} />
-                <Button className="main-btn" label="Upload Image" onClick={this.onClickUpload} />
+                <Button label="Random Meme" onClick={this.onClickRandom} />
+                <Button label="Upload Image" onClick={this.onClickUpload} />
                 <label  className="main-btn">
                 Load image file
                 <input id="upload-image" type="file" name="MEME image" onChange={this.onChangeFileImage} />
