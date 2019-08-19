@@ -87,13 +87,24 @@ export class MemeForm extends Component {
         const { topValue, bottomValue, imageSrc } = this.state;
         return (
             <div className="meme-form-div">
-                <Image src={imageSrc} />
-                <TextField label="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
-                <TextField label="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
-                <Button label="Random Meme" onClick={this.onClickRandom} />
-                <input type="file" name="MEME image" onChange={this.onChangeFileImage} />
-                <Button label="Upload Image" onClick={this.onClickUpload} />
-                <Button label="Generate" onClick={this.onClickGenerate} />
+                <Image className="memeimg" src={imageSrc} />
+
+                <div className="text-field-div">
+                <TextField className="text-field" placeholder="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
+                <TextField className="text-field" placeholder="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
+                </div>
+
+            
+                <div className="btn-div">
+                <Button className="main-btn" label="Random Meme" onClick={this.onClickRandom} />
+                <Button className="main-btn" label="Upload Image" onClick={this.onClickUpload} />
+                <label  className="main-btn">
+                Load image file
+                <input id="upload-image" type="file" name="MEME image" onChange={this.onChangeFileImage} />
+                </label>
+                </div>
+
+
             </div>
         )
     }

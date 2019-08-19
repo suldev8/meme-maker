@@ -1,10 +1,11 @@
 import React from 'react';
 
 
+
 const Image = (props) => {
-    const { src } = props;
+    const { src , className } = props;
     return (
-        <img src={src} alt=""/>
+        <img className={className} src={src} alt=""/>
     )
 }
 

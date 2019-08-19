@@ -16,4 +16,7 @@ code {
 }
 
 
-
+button:active{
+	outline: none;
+	border: none;
+}
