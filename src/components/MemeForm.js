@@ -27,7 +27,7 @@ export class MemeForm extends Component {
 
     onChangeFileImage = e => {
         const imageFile = e.target.files[0];
-        this.setState({ imageFile }, () => console.log(this.state.imageFile));
+        this.setState({ imageFile });
     }
 
     onClickRandom = e => {
@@ -54,9 +54,6 @@ export class MemeForm extends Component {
             }
         })
         .catch(err => console.error(err));
-    }
-    onClickGenerate = e => {
-
     }
 
     getMeme(imageName) {
@@ -93,7 +90,6 @@ export class MemeForm extends Component {
                 <Button label="Random Meme" onClick={this.onClickRandom} />
                 <input type="file" name="MEME image" onChange={this.onChangeFileImage} />
                 <Button label="Upload Image" onClick={this.onClickUpload} />
-                <Button label="Generate" onClick={this.onClickGenerate} />
             </div>
         )
     }
