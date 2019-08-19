@@ -1,0 +1,33 @@
+
+.btn-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+	outline: none;
+	border: none;
+}
+input {
+	display: none;
+}
+
+
+
+
+
+	.text-field-div 
+	{
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.upload-div{
+		display: flex;
+		justify-content: center;
+		margin-top: 15px;
+	}
+	
+	.meme-form-div{		
+	}

@@ -1,12 +1,10 @@
 import React from 'react';
+import './TextField.css';
 
 const TextField = (props) => {
-    const { placeholder, name, value, onChange , className} = props;
+    const { placeholder, name, value, onChange } = props;
     return (
-       
-
-            <input className={className} type="text" name={name} placeholder={placeholder} value={value} onChange={onChange} />
-        
+        <input className="text-field" type="text" name={name} placeholder={placeholder} value={value} onChange={onChange} />
     )
 }
 

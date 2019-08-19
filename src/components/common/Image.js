@@ -1,11 +1,12 @@
 import React from 'react';
+import "./Image.css"
 
 
 
 const Image = (props) => {
-    const { src , className } = props;
+    const { src } = props;
     return (
-        <img className={className} src={src} alt=""/>
+        <img className="meme-img" src={src} alt=""/>
     )
 }
 
