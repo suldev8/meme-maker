@@ -8,7 +8,7 @@ const Header = () => {
 <div>
 
  <Navbar className="navbar">
- <Navbar.Brand> MOVIE MAKER</Navbar.Brand>
+ <h4 className="webName"> MOVIE MAKER</h4>
  </Navbar>
 
  
