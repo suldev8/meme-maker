@@ -1,68 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# ![GA Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)      # ![MisK  Logo](https://misk.org.sa/wp-content/uploads/2017/07/logo-icon.png)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## **Overview**:
 
-### `npm test`
+This website was created as a part of the learning process at SEI course. The website is for meme maker, the meme maker is an image maker that allows the user to add custom resizable text to images. The developer team tried to develop this meme maker an easy to create, easy to consume, relatable to your audience, shareable, familiar, funny and smart.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Developer team:
+- Sulaiman Alhabib  (suldev8)  https://github.com/suldev8
+- Munira AlShuhail (Muniraks) https://github.com/Muniraks
+- Munirah Almadi (Imunirah)    https://github.com/Imunirah
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## **Plan**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![plan](https://b.imge.to/2019/08/19/J7Uqs.png)
 
-### `npm run eject`
+The PDF Copy docdro.id/5UVIwrp
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Wireframe**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![WireFrame](https://b.imge.to/2019/08/19/JxJXi.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## **Technologies Used**
+- **mockflow.com**: used for building the wireframe
+- **xmind.net** : A project Management tool used to build the work plan.
+- **Command Line**: used for interacting with the computer, navigating the filesystem.
+- **Source Control**: used for interaction, management and upload changes on code to Git repository
+- **Visual Studio Code**: used for coding with Html, CSS, JavaScript and React
+- **Google Chrome Web Browser**: used for launching the website
+- **Heroku**: used for deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Achived Requirements:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- **Build a web application using create-react-app**.
+- 7 components ( Button , Image, TextFiled, AboutUs,Header, MemeFrom, App)
+- Props
+- State properties
+- SetState
+- Two routes (Meme page, About us )
+- API   https://rapidapi.com/ronreiter/api/meme-generator
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+--
+## Installation:
+All you need is:
+- **Web Browser**
+- **Internet Connectivity**
+- **JavaScript support**
+- **Command Line**: Practice interacting with the computer and navigating the filesystem from the command line.
+- **Source Control**: Manage and interact with a git repository to store changes to code.
+- **Programming Fundamentals**: Work with objects, constructors, events, while learning how to strategically solve problems and resolve errors.
+- **Web Fundamentals**: Learn how communication happens over the internet, and how to structure, style, and animate documents within a browser. Also learn how to respond to actions your users take and the data they input into the browser.
+- **Browser Applications**: Dive into CSS, and figure out how to use libraries and frameworks to get lots of style and functionality for free.
+- **Deployment**: Host a static web site in a managed hosting environment.
+- **Responsive Web Design**: Making web applications that respond to device size.
+- **Server Side Applications**: Server-side scripting is a technique used in web development which involves employing scripts on a web server which produce a response customized for each user's (client's) request to the website.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Deliverables
 
-### `npm run build` fails to minify
+- **Recorded video demo**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **A link to your deployed application**
+
+- **A link to your github repository**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
