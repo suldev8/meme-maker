@@ -2,13 +2,14 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/Header.css';
 
+
 const Header = () => {
     return (
         
 <div>
 
  <Navbar className="navbar">
- <h4 className="webName"> MOVIE MAKER</h4>
+ <img className="img-logo" src="https://a.imge.to/2019/08/20/Oysuj.png"/>
  </Navbar>
 
  
