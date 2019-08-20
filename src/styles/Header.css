@@ -1,6 +1,15 @@
 .navbar {
+    margin:12px;
+	color: hsl(220, 80%, 50%);
+    text-align: right;
+      }
+
     
-}
+
+
+
+
+	
     
 .webName {
     font-family: 'Montserrat', Arial, sans-serif;

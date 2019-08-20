@@ -1,18 +1,16 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
 import '../styles/Header.css';
+import AboutUs from './AboutUs';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        
-<div>
 
- <Navbar className="navbar">
- <h4 className="webName"> MOVIE MAKER</h4>
- </Navbar>
-
- 
-       </div>
+        <div>
+            <nav>
+                <Link to="/AboutUs">About Us</Link>
+            </nav>
+        </div>
     )
 }
 
