@@ -1,14 +1,18 @@
 
 .img-logo{
-width: 200px;
+width: 100px;
 }
 
 .about-us-header{
 font-size: 30px;
 color: aliceblue;
 font-family: 'Copse', serif;
-
-
+}
+.header-nav{
+    background-color:rgba(255, 255, 255, 0.345);
+    margin-bottom: 70px;
+    box-shadow: 
+		0px 20px 20px 15px rgba(0, 0, 0, 0.071);
 }
 
 	

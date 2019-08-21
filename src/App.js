@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import MemeForm from './components/MemeForm';
 import AboutUs from './components/AboutUs';
+import Gallery from './components/Gallery';
 import { Route, Switch } from "react-router-dom";
 
 
@@ -14,6 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={MemeForm} />
           <Route path="/AboutUs" component={AboutUs} />
+          <Route path="/Gallery" component={Gallery} />
         </Switch>
       </div>
     );
