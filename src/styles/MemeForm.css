@@ -1,44 +1,39 @@
-
-.btn-div{
+.btn-div {
   display: flex;
   align-items: center;
   justify-content: space-around;
- 
-	outline: none;
-	border: none;
 
+  outline: none;
+  border: none;
 }
 input {
-	display: none;
+  display: none;
 }
 
-	.text-field-div 
-	{
+.text-field-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+.upload-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 
-	.upload-div{
-		display: flex;
-		justify-content: center;
-		margin-top: 15px;
-	}
-	
-	.meme-form-div{		
-		display: flex;
-		justify-content: space-around;
+.meme-form-div {
+  display: flex;
+  justify-content: space-around;
+}
 
-	}
-
-	.left-div{
-		display: flex;
-		flex-direction: column;
-	justify-content: center;
-	}
-	.select-div{
-		margin: 12px;
-		display: flex;
-		justify-content: space-between;
-	}
+.left-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.select-div {
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
+}
