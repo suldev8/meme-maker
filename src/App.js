@@ -11,12 +11,10 @@ class App extends Component {
     return (
       <div className="app-div" >
         <Header />
-        <HashRouter basename="/" >
-          <Switch>
-          <Route exact path="/" component={MemeForm} />
-          <Route path="/AboutUs" component={AboutUs} />
-          </Switch>
-        </HashRouter>
+        <Switch>
+          <Route exact path="meme-maker/" component={MemeForm} />
+          <Route path="meme-maker/AboutUs" component={AboutUs} />
+        </Switch>
       </div>
     );
   }
