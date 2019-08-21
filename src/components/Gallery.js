@@ -14,14 +14,14 @@ export class Gallery extends Component {
                     <Carousel.Item>
                         <img
                             className="gallery-img"
-                            src="Hazm-mememaker.jpg"
+                            src="hazim-mememaker.jpg"
                             alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="gallery-img"
-                            src="Ahlam-mememaker.jpg"
+                            src="ahlam-mememaker.jpg"
                             alt="Third slide"
                         />
                     </Carousel.Item>
@@ -35,7 +35,7 @@ export class Gallery extends Component {
                     <Carousel.Item>
                         <img
                             className="gallery-img"
-                            src="Batman-mememaker.jpg"
+                            src="batman-mememaker.jpg"
                             alt="Third slide"
                         />
                     </Carousel.Item>
