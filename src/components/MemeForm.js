@@ -16,14 +16,21 @@ const MEME_API_HEADERS = {
     'x-rapidapi-key': MEME_API_KEY
 };
 
+// Define an array for font sizes 
+const startSize = 20;
+const endSize = 100;
+const fontSizes = Array(endSize - startSize +1).fill().map((item, index) => startSize + index );
+
+
 export class MemeForm extends Component {
     state = {
         topValue: '',
         bottomValue: '',
         imageSrc: "https://a.imge.to/2019/08/20/Oysuj.png",
         imageFile: null,
-        selectFontValue: '',
-        fonts:[]
+        selectFontValue: 'Impact',
+        selectSizeValue:'50',
+        fonts: []
     };
 
     // Munira's
@@ -33,11 +40,11 @@ export class MemeForm extends Component {
             method: 'GET',
             url: 'https://ronreiter-meme-generator.p.rapidapi.com/fonts',
             headers: MEME_API_HEADERS
-            
+
         })
-        .then(response => {
-            this.setState({fonts: response.data, selectFontValue: response.data[0]})
-        })
+            .then(response => {
+                this.setState({ fonts: response.data })
+            })
 
     }
 
@@ -84,14 +91,15 @@ export class MemeForm extends Component {
     // Munira's
 
 
-    onSelectFontChange = (event) => {
-        this.setState({ selectFontValue: event.target.value });
+    onSelectChange = (event) => {
+        const selectName= event.target.name 
+        this.setState({ [selectName]: event.target.value });
     }
 
     //
     getMeme(imageName) {
         console.log(imageName);
-        const { topValue, bottomValue, selectFontValue } = this.state;
+        const { topValue, bottomValue, selectFontValue, selectSizeValue } = this.state;
         axios({
             method: 'GET',
             url: 'https://ronreiter-meme-generator.p.rapidapi.com/meme',
@@ -101,8 +109,8 @@ export class MemeForm extends Component {
                 meme: imageName,
                 top: topValue || '.',
                 bottom: bottomValue || '.',
-                font: selectFontValue
-
+                font: selectFontValue,
+                font_size: selectSizeValue
             }
         })
             .then(response => {
@@ -118,16 +126,21 @@ export class MemeForm extends Component {
 
     render() {
 
-        const { topValue, bottomValue, imageSrc, fonts } = this.state;
+        const { topValue, bottomValue, imageSrc, fonts , selectFontValue, selectSizeValue} = this.state;
         return (
             <div className="meme-form-div">
-                <Image className="memeimg" src={imageSrc} />
-
+              
+                <div className="left-div">
                 <div className="text-field-div">
                     <TextField placeholder="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
                     <TextField placeholder="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
                 </div>
 
+
+        <div className="select-div">
+                <Select name="selectFontValue" onChange={this.onSelectChange} label="Font Type"  value= {selectFontValue} options={fonts} />
+                <Select name="selectSizeValue"  onChange={this.onSelectChange} label="Font size" value= {selectSizeValue} options={fontSizes} />
+                </div>
 
                 <div className="btn-div">
                     <Button label="Random Meme" onClick={this.onClickRandom} />
@@ -138,8 +151,11 @@ export class MemeForm extends Component {
                     </label>
                 </div>
 
-                <Select onChange={this.onSelectFontChange} label="Choose font" fonts={fonts} />
+                </div>
 
+                <div className="right-div">
+                <Image className="memeimg" src={imageSrc} />
+                </div>
 
             </div>
         )
