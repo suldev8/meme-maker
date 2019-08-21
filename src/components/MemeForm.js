@@ -11,6 +11,8 @@ import { MEME_API_KEY } from '../api_keys';
 import './common/Button.css'
 import '../styles/MemeForm.css';
 
+import loading from '../ball-loading.svg';
+
 const MEME_API_HEADERS = {
     'x-rapidapi-host': 'ronreiter-meme-generator.p.rapidapi.com',
     'x-rapidapi-key': MEME_API_KEY
@@ -72,19 +74,22 @@ export class MemeForm extends Component {
             const formData = new FormData();
             formData.append('image', imageFile, imgNameTimeStamp);
 
-            axios.post('https://ronreiter-meme-generator.p.rapidapi.com/images',
-                formData, {
-                    headers:
-                        { ...MEME_API_HEADERS, 'Content-Type': 'multipart/form-data' }
-                })
-                .then(response => {
-                    if (response.data.status === 'success') {
-                        this.getMeme(response.data.name);
-                    } else if (response.data.status === 'error') {
-                        this.getMeme(imgNameTimeStamp);
-                    }
-                })
-                .catch(err => console.error(err));
+
+            this.setState({imageSrc: loading}, () => {
+                axios.post('https://ronreiter-meme-generator.p.rapidapi.com/images',
+                    formData, {
+                        headers:
+                            { ...MEME_API_HEADERS, 'Content-Type': 'multipart/form-data' }
+                    })
+                    .then(response => {
+                        if (response.data.status === 'success') {
+                            this.getMeme(response.data.name);
+                        } else if (response.data.status === 'error') {
+                            this.getMeme(imgNameTimeStamp);
+                        }
+                    })
+                    .catch(err => console.error(err));
+            })
         }
     }
 
@@ -100,25 +105,28 @@ export class MemeForm extends Component {
     getMeme(imageName) {
         console.log(imageName);
         const { topValue, bottomValue, selectFontValue, selectSizeValue } = this.state;
-        axios({
-            method: 'GET',
-            url: 'https://ronreiter-meme-generator.p.rapidapi.com/meme',
-            headers: MEME_API_HEADERS,
-            responseType: 'arraybuffer',
-            params: {
-                meme: imageName,
-                top: topValue || '.',
-                bottom: bottomValue || '.',
-                font: selectFontValue,
-                font_size: selectSizeValue
-            }
-        })
-            .then(response => {
-                const bufferImage = Buffer.from(response.data, 'binary').toString('base64');
-                const image = `data:image/jpeg;base64,${bufferImage}`;
-                this.setState({ imageSrc: image });
+        this.setState({imageSrc: loading}, () => {
+
+            axios({
+                method: 'GET',
+                url: 'https://ronreiter-meme-generator.p.rapidapi.com/meme',
+                headers: MEME_API_HEADERS,
+                responseType: 'arraybuffer',
+                params: {
+                    meme: imageName,
+                    top: topValue || '.',
+                    bottom: bottomValue || '.',
+                    font: selectFontValue,
+                    font_size: selectSizeValue
+                }
             })
-            .catch(err => console.error(err))
+                .then(response => {
+                    const bufferImage = Buffer.from(response.data, 'binary').toString('base64');
+                    const image = `data:image/jpeg;base64,${bufferImage}`;
+                    this.setState({ imageSrc: image });
+                })
+                .catch(err => console.error(err))
+        });
     }
 
 
