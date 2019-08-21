@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="app-div" >
         <Header />
-        <HashRouter>
+        <HashRouter basename="/" >
           <Route exact path="/" component={MemeForm} /> {" "}
           <Route path="/AboutUs" component={AboutUs} />
         </HashRouter>
