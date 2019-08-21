@@ -12,8 +12,10 @@ class App extends Component {
       <div className="app-div" >
         <Header />
         <HashRouter basename="/" >
-          <Route exact path="/" component={MemeForm} /> {" "}
+          <Switch>
+          <Route exact path="/" component={MemeForm} />
           <Route path="/AboutUs" component={AboutUs} />
+          </Switch>
         </HashRouter>
       </div>
     );
