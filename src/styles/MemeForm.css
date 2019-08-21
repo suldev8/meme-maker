@@ -2,18 +2,15 @@
 .btn-div{
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: space-around;
+ 
 	outline: none;
 	border: none;
+
 }
 input {
 	display: none;
 }
-
-
-
-
 
 	.text-field-div 
 	{
@@ -30,4 +27,18 @@ input {
 	}
 	
 	.meme-form-div{		
+		display: flex;
+		justify-content: space-around;
+
+	}
+
+	.left-div{
+		display: flex;
+		flex-direction: column;
+	justify-content: center;
+	}
+	.select-div{
+		margin: 12px;
+		display: flex;
+		justify-content: space-between;
 	}

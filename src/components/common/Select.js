@@ -1,14 +1,16 @@
 import React from 'react';
+import "./Select.css"
 
 const Select = (props) => {
 
-    const { onChange, fonts, label } = props;
-    const fontsOptions = fonts.map((font, i) => <option key={i} value={font}>{font}</option>);
+    const { onChange, options, label, name, value} = props;
+    const allOptions = options.map((font, i) => <option key={i} value={font}>{font}</option>);
     return (
         <label>
             {label}
-            <select onChange={onChange}>
-                {fontsOptions}
+            <br/>
+            <select className="select-list" onChange={onChange} name={name} value={value}>
+                {allOptions}
             </select>
         </label>
     );

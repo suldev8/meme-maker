@@ -1,0 +1,11 @@
+.select-list {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    border-radius: 20px;
+    outline: none;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    width: 268px;
+    color: white;
+}
