@@ -3,18 +3,21 @@
 width: 200px;
 }
 
+.about-us-header{
+font-size: 30px;
+color: aliceblue;
+font-family: 'Copse', serif;
 
+
+}
+/* 
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    align-items: center;
+
+} */
 
 	
-/*     
-.webName {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: calc(10px + 2vw);
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-     text-shadow: 0 0 0.15em #0d3faa;
-    text-shadow: 3px 3px #0d3faa;
-    
- 
-} */
+
