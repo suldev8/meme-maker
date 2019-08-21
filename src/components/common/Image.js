@@ -1,13 +1,8 @@
 import React from 'react';
-import "./Image.css"
+import "./styles/Image.css"
 
-
-
-const Image = (props) => {
-    const { src } = props;
-    return (
-        <img className="meme-img" src={src} alt=""/>
-    )
-}
+const Image = ({ src }) => (
+    <img className="meme-img" src={src} alt="" />
+);
 
 export default Image;

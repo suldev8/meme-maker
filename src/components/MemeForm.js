@@ -3,12 +3,10 @@ import Image from './common/Image';
 import Button from './common/Button';
 import TextField from './common/TextField';
 import Select from './common/Select';
-// import Button from 'react-bootstrap/Button';
-// import Image from 'react-bootstrap/Image';
 import axios from 'axios';
 import { IMAGES_NAMES } from '../data/meme-images';
 import { MEME_API_KEY } from '../api_keys';
-import './common/Button.css'
+import './common/styles/Button.css'
 import '../styles/MemeForm.css';
 
 import loading from '../ball-loading.svg';
@@ -21,7 +19,7 @@ const MEME_API_HEADERS = {
 // Define an array for font sizes 
 const startSize = 20;
 const endSize = 100;
-const fontSizes = Array(endSize - startSize +1).fill().map((item, index) => startSize + index );
+const fontSizes = Array(endSize - startSize + 1).fill().map((item, index) => startSize + index);
 
 
 export class MemeForm extends Component {
@@ -31,7 +29,7 @@ export class MemeForm extends Component {
         imageSrc: "https://a.imge.to/2019/08/20/Oysuj.png",
         imageFile: null,
         selectFontValue: 'Impact',
-        selectSizeValue:'50',
+        selectSizeValue: '50',
         fonts: []
     };
 
@@ -75,7 +73,7 @@ export class MemeForm extends Component {
             formData.append('image', imageFile, imgNameTimeStamp);
 
 
-            this.setState({imageSrc: loading}, () => {
+            this.setState({ imageSrc: loading }, () => {
                 axios.post('https://ronreiter-meme-generator.p.rapidapi.com/images',
                     formData, {
                         headers:
@@ -97,7 +95,7 @@ export class MemeForm extends Component {
 
 
     onSelectChange = (event) => {
-        const selectName= event.target.name 
+        const selectName = event.target.name
         this.setState({ [selectName]: event.target.value });
     }
 
@@ -105,7 +103,7 @@ export class MemeForm extends Component {
     getMeme(imageName) {
         console.log(imageName);
         const { topValue, bottomValue, selectFontValue, selectSizeValue } = this.state;
-        this.setState({imageSrc: loading}, () => {
+        this.setState({ imageSrc: loading }, () => {
 
             axios({
                 method: 'GET',
@@ -134,35 +132,35 @@ export class MemeForm extends Component {
 
     render() {
 
-        const { topValue, bottomValue, imageSrc, fonts , selectFontValue, selectSizeValue} = this.state;
+        const { topValue, bottomValue, imageSrc, fonts, selectFontValue, selectSizeValue } = this.state;
         return (
             <div className="meme-form-div">
-              
+
                 <div className="left-div">
-                <div className="text-field-div">
-                    <TextField placeholder="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
-                    <TextField placeholder="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
-                </div>
+                    <div className="text-field-div">
+                        <TextField placeholder="Top text" name="top-text" value={topValue} onChange={this.onChangeTopText} />
+                        <TextField placeholder="Bottom text" name="bottom-text" value={bottomValue} onChange={this.onChangeBottomText} />
+                    </div>
 
 
-        <div className="select-div">
-                <Select name="selectFontValue" onChange={this.onSelectChange} label="Font Type"  value= {selectFontValue} options={fonts} />
-                <Select name="selectSizeValue"  onChange={this.onSelectChange} label="Font size" value= {selectSizeValue} options={fontSizes} />
-                </div>
+                    <div className="select-div">
+                        <Select name="selectFontValue" onChange={this.onSelectChange} label="Font Type" value={selectFontValue} options={fonts} />
+                        <Select name="selectSizeValue" onChange={this.onSelectChange} label="Font size" value={selectSizeValue} options={fontSizes} />
+                    </div>
 
-                <div className="btn-div">
-                    <Button label="Random Meme" onClick={this.onClickRandom} />
-                    <Button label="Upload Image" onClick={this.onClickUpload} />
-                    <label className="main-btn">
-                        Load image file
+                    <div className="btn-div">
+                        <Button label="Random Meme" onClick={this.onClickRandom} />
+                        <Button label="Upload Image" onClick={this.onClickUpload} />
+                        <label className="main-btn">
+                            Load image file
                 <input id="upload-image" type="file" name="MEME image" onChange={this.onChangeFileImage} />
-                    </label>
-                </div>
+                        </label>
+                    </div>
 
                 </div>
 
                 <div className="right-div">
-                <Image className="memeimg" src={imageSrc} />
+                    <Image className="memeimg" src={imageSrc} />
                 </div>
 
             </div>
