@@ -1,0 +1,23 @@
+.about-us-div{
+    color: white;
+    font-style: oblique;
+    justify-content: center;
+    font-family: 'Copse', serif;
+    padding:100px;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+li {
+    list-style: none;
+}
+
+p{
+    font-family: 'Copse', serif;
+    font-size: 30px;
+}
+
+ul {
+    font-size: 35px;
+}
